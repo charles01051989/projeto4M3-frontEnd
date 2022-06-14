@@ -1,5 +1,5 @@
 const PaletaContext = {
-    paletaEndpoint: () => `${Api.baseUrl}/paletas`, 
+    paletaEndpoint: () => `${Api.baseUrl}/paletas`,
     paletaLista: () => `${PaletaContext.paletaEndpoint()}/all-paletas`,
     paletaById: id => `${PaletaContext.paletaEndpoint()}/one-paleta/${id}`,
     createPaleta: () => `${PaletaContext.paletaEndpoint()}/create-paleta`,
@@ -16,8 +16,7 @@ const SacolaContext = {
   }
 
 export const Api = {
-    
-    baseUrl: process.env.REACT_APP_API_URL,
+    baseUrl:`http://localhost:3001`,
     ...PaletaContext,
     ...SacolaContext,
 };
